@@ -1,3 +1,5 @@
+'use strict';
+const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
@@ -5,6 +7,8 @@ const pokemonRouter = require('./routes/pokemon');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+dotenv.load();
 
 app.disable('x-powered-by');
 

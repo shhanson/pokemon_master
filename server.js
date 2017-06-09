@@ -1,5 +1,5 @@
 'use strict';
-const dotenv = require('dotenv').config();
+const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');

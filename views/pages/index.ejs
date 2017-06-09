@@ -15,18 +15,20 @@
 </head>
 
 <body>
-    <h1>All Pokemon</h1>
-    <table><thead>
-            <tr>
-                <td>Sprite</td>
-                <td>Name</td>
-                <td>Pokedex #</td>
-        </thead>
-        <tbody>
-
-            <% for(let i = 0; i < data.length; i++){ %>
+    <div class="container">
+        <h1 class="center">All Pokemon</h1>
+        <table class="bordered highlight">
+            <thead>
                 <tr>
-                    <td> <a href="/pokemon/<%= data[i].pokedex_id %>"><img src='<%= data[i].image_url %>'></td>
+                    <td>Sprite</td>
+                    <td>Name</td>
+                    <td>Pokedex #</td>
+            </thead>
+            <tbody>
+
+                <% for(let i = 0; i < data.length; i++){ %>
+                    <tr>
+                        <td> <a href="/pokemon/<%= data[i].pokedex_id %>"><img src='<%= data[i].image_url %>'></td>
                         <td> <%= data[i].name %> </td>
                         <td> <%= data[i].pokedex_id %> </td>
                     </tr>
@@ -39,5 +41,6 @@
         <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="/js/materialize.min.js"></script>
+  </div>
     </body>
 </html>

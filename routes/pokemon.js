@@ -41,7 +41,7 @@ router.get('/pokemon/:id', (req, res, next) => {
     if (Number.isNaN(id) || id < 1) {
         next();
     } else {
-        //Need to add code to check if the ID is contained in the Database firs.
+        //Need to add code to check if the ID is contained in the Database first.
         //If the user attempts to access an ID out of range, should be 404.
         //Currently, 500 gets sent.
         knex('pokemon').select(headers)
